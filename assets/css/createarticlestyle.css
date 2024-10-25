@@ -1,0 +1,25 @@
+header h1 {
+	text-align: center;
+}
+
+.createarticlezone {
+	margin: auto;
+	width: 700px;
+	height: 700px;
+	border: solid 1px black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.createarticlezone textarea {
+	width: 675px;
+	height: 380px;
+	resize: none;
+}
+
+.formarticle {
+	/*border: solid 1px black;
+	border-radius: 5px;*/
+	justify-content: center;
+	padding: 10px;
+}

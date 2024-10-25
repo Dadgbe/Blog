@@ -1,0 +1,18 @@
+.headertitle {
+	text-align: center;
+}
+
+.infouser {
+    margin: auto;
+    width: 500px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative; /* Необходимо для абсолютного позиционирования внутри блока */
+}
+
+.exitac {
+    position: absolute;
+    bottom: 10px; /* Расстояние снизу */
+    left: 10px; /* Расстояние слева */
+}

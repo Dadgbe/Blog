@@ -1,0 +1,34 @@
+header h1 {
+	text-align: center;
+	display: flex;
+}
+
+
+
+.user-articles {
+    margin: auto;
+    width: 500px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 100px;
+}
+
+.article_title {
+	text-align: center;
+}
+
+.article_image {
+	border: solid 1px black;
+	border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.article_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}

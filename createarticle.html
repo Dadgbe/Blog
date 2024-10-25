@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/createarticlestyle.css">
+    <meta charset="UTF-8">
+    <title>Создание статьи</title>
+
+    <header>
+        <h1 class="headertitle">Создание статьи</h1>
+        <a href="personalac.html">Назад</a>
+    </header>
+
+</head>
+<body>
+
+    <div class="createarticlezone">
+        <div class="formarticle">
+            <form method="post" action="assets/php/createnewarticleP.php" enctype="multipart/form-data">
+                <br><br>
+                Раздел статьи:
+                <select name="category-article" required="">
+                    <option selected disabled hidden>Выберите раздел</option>
+                    <option value="1">Новости</option>
+                    <option value="2">Рецепты</option>
+                    <option value="3">Свои мысли</option>
+                </select>
+                <br><br>
+                Название статьи: 
+                <input type="text" name="title-article" required=""/>
+                <br><br>
+                Текст статьи:
+                <br><br>
+                <textarea name="text-article" required="">
+                </textarea>
+                <br><br>
+                Изображение статьи:
+                <input type="file" name="image-article" accept="image/*" required=""/>
+                <br><br>
+                <input type="submit" name="create-article" value="Создать статью"/>
+            </form> 
+        </div> 
+    </div>
+
+</body>
+</html>

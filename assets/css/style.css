@@ -1,0 +1,306 @@
+/* Для веб-кит-скроллбаров (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет ползунка */
+  border-radius: 6px; /* Скругленные углы ползунка */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет трека (фона) */
+}
+
+/* Для скроллбаров в Firefox */
+/* Если вы используете Firefox, можно также добавить стили для scrollbar-color и scrollbar-width */
+/* scrollbar-color: thumb-color track-color; */
+
+/* Цвет ползунка */
+html {
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Ширина ползунка (значение по умолчанию - auto) */
+html {
+  scrollbar-width: thin;
+}
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+  overflow-y: visible;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.horizontal-menu {
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 5px;
+
+}
+
+
+
+
+h1 {
+	text-align: center;
+  color: Black;
+	margin: 0;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+
+  border: 0;
+  background-color: #e5e5e5;
+}
+
+header {
+    height: 100%;
+}
+
+
+
+.horizontal-menu ul {
+  list-style: none; /* Убираем маркеры списка */
+  display: flex; /* Используем flex-контейнер для выравнивания элементов горизонтально */
+}
+
+.horizontal-menu li {
+  margin-right: 20px; /* Отступ между пунктами меню */
+}
+
+.horizontal-menu a {
+  text-decoration: none;
+  color: #333; /* Цвет текста */
+}
+
+
+
+/* Добавляем стили для .dropdown и .dropdown-content */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Стили для ссылок в выпадающем меню */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+
+}
+
+/* Отображение выпадающего меню при наведении на .dropdown */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-akk {
+  margin-left: auto;
+}
+
+
+.slider-container {
+  width: 750px;
+  height: 250px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide-image {
+  width: 730px;
+  height: 220px;
+  object-fit: cover; /* Сохранить соотношение сторон и заполнить контейнер */
+  border-radius: 5px; /* Если нужны скругленные углы */
+}
+
+
+.articlestree {
+  margin-top: 150px;
+}
+
+
+
+
+.articles {
+  display: flex;
+  margin: auto;
+  width: 750px;
+  height: 500px;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.article-image {
+  position: absolute;
+
+}
+
+.article-image img {
+  width: 730px;
+  height: 220px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+
+}
+
+.article {
+  display: block;
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  margin-top: 240px;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+.article-info {
+  display: flex;
+
+}
+
+.article-title h1 {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+  text-align: left;
+}
+
+.article-date {
+  padding: 5px;
+  margin-left: auto;
+  right: 5px;
+  bottom: 5px;
+}
+
+.article-date h1 {
+  font-weight: normal;
+  font-size: 12px;
+  
+}
+
+.article-content p {
+  padding: 5px;
+  font-size: 14px;
+  margin: auto;
+}
+
+.morearticle {
+  margin-left: 5px;
+}
+
+.comments {
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 200px;
+  height: 230px;
+  margin-left: 10px;
+  margin-top: 240px;
+  padding: 10px;
+}
+
+.hr-line {
+  margin: 0em;
+}
+
+.comments h1 {
+  font-weight: normal;
+  font-size: 16px;
+  padding-top: 0;
+  text-align: left;
+
+}
+
+.comments-content {
+    max-height: 200px; /* Задайте максимальную высоту контейнера комментариев */
+    overflow-y: auto; /* Добавьте вертикальные полосы прокрутки при необходимости */
+}
+
+
+input {
+  border-radius: 10px
+}
+
+.gocomment {
+  display: flex;
+}
+
+.sendcomment {
+  width: 50px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.likes {
+  margin-left: 5px;
+}
+
+.fa-regular {
+  font-family: 'Font Awesome 5 Free Regular';
+}
+
+.fa-solid {
+  font-family: 'Font Awesome 5 Free Solid';
+}
+
+/* Добавьте этот блок для правильного отображения иконок */
+i[class^="fa-"], i[class*=" fa-"] {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5; /* Цвет фона футера */
+    padding: 10px; /* Поля для контента футера */
+    text-align: center; /* Выравнивание содержимого по центру */
+}
+
+
+
+/* Дополнительные стили, если нужно центрировать содержимое футера */
+footer p {
+  margin: 0; /* Убираем внешний отступ у параграфов внутри футера */
+}
+

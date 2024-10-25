@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/personalacstyle.css">
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+
+    <header>
+        <h1 class="headertitle">Личный кабинет пользователя</h1>
+    </header>
+
+</head>
+<body>
+
+    <div class="infouser">
+        <div class="exitac">
+            <a id="logoutButton" href="#">Выйти из аккаунта</a>
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#logoutButton").on("click", function (e) {
+                        // Удаляем куки с именем "authUser"
+                        document.cookie = "authUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        
+                        // Переходим на главную страницу (можете указать другую страницу)
+                        window.location.href = "index.php";
+                    });
+                });
+            </script>
+            <a href="index.php">На главную</a>
+            <a href="myarticles.php">Мои статьи</a>
+            <a href="createarticle.html">Создание статьи</a>
+        </div>
+    </div>
+
+</body>
+</html>

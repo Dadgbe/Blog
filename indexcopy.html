@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playpen+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+	<title>Сайт "МойБлог"</title>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        checkUser();
+
+        $(".personal-akk a").on("click", function (e) {
+            // Проверяем наличие куки с именем "authUser"
+            if (getCookie("authUser")) {
+                // Если куки существует, переходим на personalac.html
+                window.location.href = "personalac.html";
+            } else {
+                // Иначе выводим сообщение о необходимости авторизации
+                alert("Необходимо пройти процесс авторизации");
+            }
+            e.preventDefault();
+        });
+
+        // Функция для получения значения куки по имени
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            // Возвращаем true, если куки существует, иначе false
+            return matches ? true : false;
+        }
+
+        function checkUser() {
+            if (getCookie("authUser")) {
+                $(".signin").hide();
+                $(".signup").hide();
+            } else {
+                $(".signin").show();
+                $(".signup").show();
+            }
+        }
+    });
+</script>
+
+
+    <header>
+        <h1>Сайт "МойБлог"</h1>
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="/о_себе">О себе</a></li>
+                <li><a href="index.html">Главное</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="/разделы">Разделы</a>
+                        <div class="dropdown-content">
+                            <a href="#">Новости</a>
+                            <a href="#">Рецепты</a>
+                            <a href="#">Свои мысли</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="signin"><a href="avtor.html">Авторизация</a></li>
+                <li class="signup"><a href="reg.html">Регистрация</a></li>
+                <li onclick="" class="personal-akk"><a href="">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</head>
+
+<body>
+    
+
+
+
+
+    <div class="articlestree">
+        <div class="articles">
+
+            <div class="article-image">
+                <img src="assets/images/картинкатест.jpg">
+            </div>
+
+            <div class="article">
+                <div class="article-info">
+                    <div class="article-title">
+                        <h1>Название статьи</h1>
+                    </div>
+                    <div class="article-date">
+                        <h1>16.11.2023</h1>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class=article-content>
+                    <p>
+                        В мире, где время бежит неумолимо, каждая буква ценится более золота. А я – профессиональный писатель, строитель мира словами. Мои опыт и страсть сплетены в высокохудожественные фразы, создавая граничащую с магией литературу. Ритм, сюжет, глубина – все, чтобы захватить твои мысли и унести в мир невероятных приключений. Позволь мне быть голосом, который переплетается с твоими мыслями, и дай мне возможность вдохнуть жизнь в это уникальное произведение. Открой двери в мир слов вместе со мной.
+                    </p>
+                </div>  
+                <hr class="hr-line">
+                <a class="morearticle" href="">Подробнее</a>
+            </div>
+            <div class="comments">
+                <h1 class="comments-title">Комментарии:</h1>
+                <hr class="hr-line">
+                <div class="comments-content">
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p> 
+                </div>
+                <!-- <div class="gocomment">
+                    <input type="" name="" placeholder="Введите комментарий" >
+                    <button class="sendcomment"></button>  
+                </div> -->
+            </div>
+        </div>   
+
+        <div class="articles">
+
+            <div class="article-image">
+                <img src="assets/images/картинкатест2.jpg">
+            </div>
+
+            <div class="article">
+                <div class="article-info">
+                    <div class="article-title">
+                        <h1>Название статьи</h1>
+                    </div>
+                    <div class="article-date">
+                        <h1>16.11.2023</h1>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class=article-content>
+                    <p>
+                        В мире, где время бежит неумолимо, каждая буква ценится более золота. А я – профессиональный писатель, строитель мира словами. Мои опыт и страсть сплетены в высокохудожественные фразы, создавая граничащую с магией литературу. Ритм, сюжет, глубина – все, чтобы захватить твои мысли и унести в мир невероятных приключений. Позволь мне быть голосом, который переплетается с твоими мыслями, и дай мне возможность вдохнуть жизнь в это уникальное произведение. Открой двери в мир слов вместе со мной.
+                    </p>
+                </div> 
+                <hr class="hr-line">
+                <a class="morearticle" href="">Подробнее</a> 
+            </div>
+            <div class="comments">
+                <h1 class="comments-title">Комментарии:</h1>
+                <hr class="hr-line">
+                <div class="comments-content">
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p> 
+                </div>
+                <div class="gocomment">
+                    <input type="" name="" placeholder="Введите комментарий" >
+                    <button class="sendcomment"></button>  
+                </div>
+            </div>
+        </div>   
+
+        <div class="articles">
+
+            <div class="article-image">
+                <img src="assets/images/картинкатест3.jpg">
+            </div>
+
+            <div class="article">
+                <div class="article-info">
+                    <div class="article-title">
+                        <h1>Название статьи</h1>
+                    </div>
+                    <div class="article-date">
+                        <h1>16.11.2023</h1>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class=article-content>
+                    <p>
+                        В мире, где время бежит неумолимо, каждая буква ценится более золота. А я – профессиональный писатель, строитель мира словами. Мои опыт и страсть сплетены в высокохудожественные фразы, создавая граничащую с магией литературу. Ритм, сюжет, глубина – все, чтобы захватить твои мысли и унести в мир невероятных приключений. Позволь мне быть голосом, который переплетается с твоими мыслями, и дай мне возможность вдохнуть жизнь в это уникальное произведение. Открой двери в мир слов вместе со мной.
+                    </p>
+                </div>  
+                <hr class="hr-line">
+                <a class="morearticle" href="">Подробнее</a> 
+            </div>
+            <div class="comments">
+                <h1 class="comments-title">Комментарии:</h1>
+                <hr class="hr-line">
+                <div class="comments-content">
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p>
+                    <p>Комментарий</p> 
+                </div>
+                <div class="gocomment">
+                    <input type="" name="" placeholder="Введите комментарий" >
+                    <button class="sendcomment"></button>  
+                </div>
+            </div>
+        </div>   
+
+    </div>
+
+
+
+    
+
+</body>
+
+<footer>
+    <p>Лямин Юрий Алексеевич 4ПКС-320</p>
+</footer>
+
+</html>

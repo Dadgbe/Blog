@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/regstyle.css">
+	<title>Регистрация пользователя</title>
+
+	<header>
+		<h1>Регистрация</h1>
+	</header>
+
+</head>
+<body>
+
+	<div class="registration">
+		<form method="post" action="assets/php/signup.php">
+		<br><br>
+		Укажите ваше имя <input name="user-name" type="text" maxlength="20" size="25" value="" required/><br><br>
+
+		E-mail: <input name="email" type="email" maxlength="30" size="30" value="" required/><br><br>
+		Пароль: <input name="pass" type="password" value="" required><br><br>
+		<input action="reg.php" type=submit value="Зарегистрироваться"/> <br><br>
+	</form>
+	<form method="post" action="index.php">
+		<input type=submit value="На главную"/>
+	</form>
+		
+	</div>
+
+	
+		
+
+</body>
+</html>
